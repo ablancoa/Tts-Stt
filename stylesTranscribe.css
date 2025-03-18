@@ -1,0 +1,20 @@
+.inputContainerDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerTranscribe {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bg-color);
+    height: 100%;
+    padding: 20px;
+}
+
+.inputContainerDiv label {
+    width: 100%;
+}

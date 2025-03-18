@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylesTtS.css" />
+    <link rel="stylesheet" href="stylesTranscribe.css">
+    <title>Speech to Text</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="heading">Speech to Text</p>
+      <div class="options">
+        <div class="anguage">
+          <p>Lenguajes</p>
+          <select name="input-language" id="language"></select>
+        </div>
+      </div>
+      <div class="line"></div>
+      <button class="btn record">
+        <div class="icon">
+          <ion-icon name="mic-outline"></ion-icon>
+          <img src="bars.svg" alt="" />
+        </div>
+        <p>Iniciar escucha</p>
+      </button>
+      <p class="heading">Resultado :</p>
+      <div
+        class="result"
+        spellcheck="false"
+        placeholder="Text will be shown here"
+      >
+        <p class="interim"></p>
+      </div>
+      <div class="buttons">
+        <button class="btn clear">
+          <ion-icon name="trash-outline"></ion-icon>
+          <p>Limpiar</p>
+        </button>
+      </div>
+    </div>
+    <div class="containerTTS">
+      <p class="heading">Text to Speech</p>
+
+      <p>
+        Ingrese texto en el campo de abajo y presione enter o el botón "play"
+        para escucharlo. Cambie las voces usando el menú desplegable.
+      </p>
+
+      <form>
+        <input id="txt" type="text" class="txt" placeholder="Ingrese texto" />
+        <div>
+          <label for="rate">Rate</label
+          ><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
+          <div class="rate-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <label for="pitch">Tono</label
+          ><input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
+          <div class="pitch-value">1</div>
+          <div class="clearfix"></div>
+        </div>
+        <select id="voices"></select>
+        <div class="controls">
+          <button id="play" class="btn clear" type="submit">Play</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="containerTranscribe">
+      <p class="heading">Transcribe audio file</p>
+      <div class="inputContainerDiv">
+        <label for="audioFile">URL del audio</label>
+        <input type="url" id="audioFile" />
+      </div>
+      <div class="inputContainerDiv">
+        <label for="audioFileName">Nombre del audio</label>
+        <input type="text" id="audioFileName" />
+      </div>
+      <button id="transcribeBtn" class="btn clear">Transcribir</button>
+      <div id="transcriptionResult"></div>
+    </div>
+
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- LANGUAGES -->
+    <script src="languages.js"></script>
+
+    <!-- SCRIPT SPEECH TO TEXT -->
+    <script src="script.js"></script>
+
+    <!-- SCRIPT TEXT TO SPEECH -->
+    <script src="scriptTtS.js"></script>
+
+    <!-- SCRIPT TRANSCRIBE AUDIO FILE -->
+    <script src="scriptTranscribe.js"></script>
+  </body>
+</html>

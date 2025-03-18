@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #faa41a;
+    --bg-color: #fff;
+    --text-color: #000;
+    --light-text-color: #a5a5a5;
+    --body-bg-color: #f5f5f5;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 90%;
+  margin: 0 auto;
+}
+
+h1,
+p {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.txt,
+select,
+form > div {
+  display: block;
+  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.txt {
+  width: 80%;
+}
+
+select {
+  width: 83%;
+}
+
+form > div {
+  width: 81%;
+}
+
+.txt,
+form > div {
+  margin-bottom: 10px;
+  overflow: auto;
+}
+.txt {
+  height: 200px;
+  overflow: scroll;
+  border-radius: 5px;
+  border: 1px solid var(--light-text-color);
+}
+
+.clearfix {
+  clear: both;
+}
+
+label {
+  float: left;
+  width: 10%;
+  line-height: 1.5;
+}
+
+.rate-value,
+.pitch-value {
+  float: right;
+  width: 5%;
+  line-height: 1.5;
+}
+
+#rate,
+#pitch {
+  float: right;
+  width: 81%;
+  border-color: var(--primary-color);
+}
+
+.controls {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.controls button {
+  padding: 10px;
+}
+
+.containerTTS {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #fff;
+}
